@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"><!-- Za karaktere poput š, č, ć, đ, ž-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+    <link rel="icon" type="image/png" href="img/ikonica1.png"><!-- Favicon-->
+    <title>Forma</title>
+</head>
+<body>
+<nav class="navbar navbar-fixed-top" id = "s">
+<div class="container">
+<div class="row">
+<div class="col-md-7"> <!-- Bootstrapov grid sistem-->
+    <div class="navbar-header"> <a href="index.html"><img src="img/ikonica2.ico" width="50" height="50"/></a> </div> <!-- Logo Hipodroma-->
+<!-- Linkovane stranice -->
+<div id="navbar" class="collapse navbar-collapse">
+    <ul class="nav navbar-nav">
+        <li><a href="about.html"><span style="color:white">O nama</span></a></li>
+        <li><a href="vinskipodrumi.html"><span style="color:white">Vinski podrumi</span></a></li>
+        <li><a href="contact.html"><span style="color:white">Kontakt</span></a></li>
+        <li><a href="sponzori.html"><span style="color:white">Sponzori</span></a></li>    
+    </ul>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<br>
+<br>
+<div class="container">
+<div class="row col-md-6">
+<div id="skolaforma">
+<form onsubmit="return validacija()">
+<br>
+<h5>Unesite ime i prezime:
+<br>
+<input type="text" name="ime" placeholder="Ime i prezime" required class="forma" autocomplite="off">
+<br><br>
+Broj telefona:
+<br>
+<input type="number" name="telefon" max="9999999999" placeholder="Broj telefona" required class="forma" autocomplite="off">
+<br><br>
+E-mail adresa:
+<br>
+<input name="mail" type="email" placeholder="E-mail" required class="forma" autocomplite="off">
+<br><br>
+Opredelite se za jednu od usluga:
+<br>
+    <input type="radio" name="crvenoVino" value="1" id="crvenoVino"/>Crveno vino
+<br>
+    <input type="radio" name="beloVino" value="2" id="beloVino"/>Belo vino</h5>
+<br><br>
+<INPUT type="submit" value="Registruj se" name="submit" onclick="validacija()"> 
+<INPUT type="reset" value="Obriši podatke" namer="reset" onclick="resetujPolja()">
+</div>
+</div>
+<br><br><br><br>
+        <div class="col-md-3">
+            <img src = "img/dd1.jpg"/>
+        </div>
+        <div class="col-md-3">
+            <img src = "img/istorija3.jpg"/>
+        </div>
+        <div class="col-md-3">
+            <img src = "img/istorija3.jpg"/>
+        </div>
+        <div class="col-md-3">
+            <img src = "img/dd1.jpg"/>
+        </div>
+</div>
+<br><br><br><br><br><br><br>
+<footer>
+<div class="row" id="informacije">
+    <p>Plantaze  „Vinarija AMMT“
+        <br/>
+        Beograd, Jove Ilica 
+        <br/>
+        Tel: +381 11 1234 567    
+        <br/>
+        Fax: +381 11 1234 568
+        <br/>
+        E-mail: trmcic.djordje1@gmail.com
+        </p>
+ </div>
+ </footer>
+<script>
+
+function pripremiFormu() {
+    resetujPolja();
+
+}
+function resetujPolja() {
+    document.forms[0].ime.style.border = "1px solid grey";
+    document.forms[0].telefon.style.border = "1px solid grey";
+    document.forms[0].mail.style.border = "1px solid grey";
+    prozorcic();
+
+}
+function prozorcic() {
+    var prozor = window.open("", "MsgWindow", "width=400,height=400");
+    prozor.document.write("<p>Forma je resetovana!</p>");
+}
+
+function validacija() {
+var greska = false;
+    if ((document.getElementById('crvenoVino').checked==false && document.getElementById('beloVino').checked==false) || (document.getElementById('crvenoVino').checked==true && document.getElementById('beloVino').checked==true)) { 
+        greska = true;
+    }
+    if (document.forms[0].ime.value=='' || document.forms[0].ime.value.length<2) {
+        document.forms[0].ime.style.border = "1px solid red";
+        document.forms[0].ime.focus();
+        greska = true;
+    }
+    if (document.forms[0].telefon.value=='' || document.forms[0].telefon.value.length<9 || document.forms[0].telefon.value.length>10) {
+        document.forms[0].telefon.style.border = "1px solid red";
+        document.forms[0].telefon.focus();
+        greska = true;
+    }
+    if (document.forms[0].mail.value=='') {
+        document.forms[0].mail.style.border = "1px solid red";
+        document.forms[0].mail.focus();
+        greska = true;
+    }
+
+    if (greska == true) {
+        alert("Molimo Vas, popunite formu ispravno.")
+        return false;
+        } else {
+        return true;
+        }
+}
+    
+</script>
+
+</body>
+</html>

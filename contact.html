@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"><!-- Za karaktere poput š, č, ć, đ, ž-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+    <link rel="icon" type="image/png" href="img/ikonica1.png"><!-- Favicon-->
+    <title>Kontakt</title>
+</head>
+<nav class="navbar navbar-fixed-top" id = "s">
+<div class="container">
+<div class="row">
+<div class="col-md-7"> <!-- Bootstrapov grid sistem-->
+    <div class="navbar-header"> <a href="index.html"><img src="img/ikonica2.ico" width="50" height="50"/></a> </div> <!-- Logo Hipodroma-->
+<!-- Linkovane stranice -->
+<div id="navbar" class="collapse navbar-collapse">
+    <ul class="nav navbar-nav">
+        <li><a href="about.html"><span style="color:white">O nama</span></a></li>
+        <li><a href="vinskipodrumi.html"><span style="color:white">Vinski podrumi</span></a></li>
+        <li class:"active" "color:white"><a href="contact.html"><span style="color:white">Kontakt</span></a></li>
+        <li><a href="sponzori.html"><span style="color:white">Sponzori</span></a></li>
+    </ul>
+</div>
+</div>
+</div>
+</div>
+</nav>
+
+<form class="form-horizontal" id="kontaktForma">
+<legend id="nazivForme"><h3 id="naslov">Kontaktirajte nas!</h3></legend>
+<fieldset>
+<div class="row" class="zaFormu">
+	<div class="col-md-3"></div>
+	<div class="col-md-4" class="zaFormu">
+	<div class="form-group">
+ 		<div class="col-md-6" id="imeIprezime">
+ 		 	<input id="name" type="text" required placeholder="Ime i prezime" class="form-control input-sm" required>
+  		</div>
+	</div>
+	<div class="form-group">
+  		<div class="col-md-6" id="email">
+  			<input id="textinput" name="textinput" type="email" placeholder="E-mail" class="form-control input-sm" required>
+  		</div>
+	</div>
+	<div class="form-group">
+  		<textarea class="col-md-4" id="poruka" placeholder="Pošaljite svoju poruku" form="kontaktForma"></textarea>
+	</div>
+  <div class="form-group">
+  <div>
+    <button id="potvrda" name="dugme" id="dugme" class="col-md-4">Pošalji poruku</button>
+  </div>
+</div>
+	</div>
+	<div class="col-md-4">
+		<img src="img/vinarija11.jpg" id="staSeGdeNalazi"/>
+	</div>
+</div>
+</fieldset>
+</form>
+</div>
+<h3 id="naslov">Čekamo vas!</h3>
+<div class="col-md-12" id="map">
+</div>
+<footer>
+<div class="row" id="informacije">
+  <p>Plantaze  „Vinarija AMMT“
+    <br/>
+    Beograd, Jove Ilica 
+    <br/>
+    Tel: +381 11 1234 567    
+    <br/>
+    Fax: +381 11 1234 568
+    </p>
+ </div>
+ </footer>
+<script>
+function initMap() {
+  var uluru = {lat: 47.7857322, lng: 24.425213};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 17,
+    center: uluru
+    });
+  var marker = new google.maps.Marker({
+    position: uluru,
+      map: map
+      });
+  }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBU5bdHa3rhwuIKZLp11PBEN20qCYmXHhE&callback=initMap">
+
+    </script>
+</body>
+</html>

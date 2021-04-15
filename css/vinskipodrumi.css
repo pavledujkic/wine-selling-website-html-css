@@ -1,0 +1,95 @@
+
+#sponzori{
+	text-align: right;
+	background:rgba(77, 77, 77, 0.7);
+	color:#ffffff;
+	border: 70px 15px;
+	padding: 15px;
+}
+
+.slike{
+	border-radius: 10px;
+}
+.row a{
+	color: #5f5f5f !important;
+}
+img:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+.row a:hover{
+	color: #ff99ff !important;
+}
+
+.row a:active{
+	background:#9999ff !important;
+}
+
+#meni{
+	position: fixed;
+	background-color: #5f5f5f;
+	font-color: #ffffff !important;
+
+}
+#meni a:hover{
+	background-color: #000000;
+	color: #ffffff;
+}
+#p {
+	text-align: justify;
+}
+
+#footer{
+	padding-right: 10px;
+	text-align: right;
+	margin-top: 20px;
+	margin-bottom: -10px;
+	background-color:#4d4d4d !important;
+	color: #ffffff;
+	opacity: none !important;
+}
+
+h3{
+	text-align: center;
+}
+
+#skola{
+	text-align: justify;
+}
+
+#obuka{
+	border-left: double;
+	border-right: double;
+}
+
+#rekreacija{
+	border-right: double;
+}
+
+#dugme1{
+	border-radius: 20px;
+	color:#ffffb3 !important;
+	padding: 10px 50px;
+	text-align: center;
+	margin-left: 200px;
+}
+
+#dugme2{
+	border-radius: 20px;
+	color:#ffffb3 !important;
+	padding: 10px 50px;
+	text-align: center;
+	margin-left:230px;
+}
+
+#pocetak{
+	text-align: justify;
+	padding-left: 85px;
+	padding-right: 85px;
+}
+
+h4{
+	text-align: center;
+}
+

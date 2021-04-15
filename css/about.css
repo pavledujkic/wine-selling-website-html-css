@@ -1,0 +1,110 @@
+@media{
+
+}
+
+#nav{
+	position: fixed;
+	background-color: #5f5f5f;
+	font-color: #ffffff !important;
+	/*background-color: transparent;*/
+    width: 100%;
+    height: auto;
+    padding-right: 80px;
+
+}
+#nav a:hover{
+	background-color: #000000;
+	color: #ffffff;
+}
+#p {
+	text-align: justify;
+	padding-right: 50px;
+}
+body{
+	background-color: #f2f2f2;
+	padding-right: 100px;
+	padding-left: 100px;
+}
+
+#footer{
+	text-align: right;
+	background:#4d4d4d;
+	color:#ffffff;
+	padding-right: 10px;
+	margin-right: -100px;
+	margin-left: -100px;
+	margin-top: 20px;
+	margin-bottom: -10px;
+	
+}
+
+
+
+
+.hide-bullets {
+    list-style:none;
+    margin-left: -40px;
+    margin-top:20px;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+    width: 100%;
+}
+
+
+
+#title-bar{
+	text-align: left;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	font-color: #ffffff !important;
+}
+#slika{
+	padding-left: 600px;
+	max-width: 550px;
+	height: auto;
+}
+#d1, #d2{
+	height: 50px;
+     width: 250px;
+}
+#demo {
+	text-align: justify;
+}
+
+#galerija{
+	position: center;
+	padding-left: 180px;
+}
+
+#demo1 {
+	text-align: justify;
+}
+#bt{
+	background-color: #5f5f5f;
+}
+
+.row{
+	padding-left: 40px;
+}
+title{
+	background-color: #ffffff !important;
+}
+#krug {
+    border-radius: 50%;
+    padding: 10px 10px 10px 10px;
+
+}
+#redSlika{
+	padding-right: 50px;
+}
+#senka{
+    float:left;
+   
+	box-shadow: 10px 10px 5px #888888;
+}
+
